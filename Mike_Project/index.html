@@ -1,72 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css"> <!-- Link to external CSS stylesheet-->
-	<title>NCA&T Participation Portal - Home</title> <!-- Title of the webpage -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS stylesheet-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> <!-- jQuery UI CSS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> <!-- jQuery UI -->
+    <title>NCA&T Participation Portal - Home</title> <!-- Title of the webpage -->
+    <style>
+        /* Custom styles for Accordion, Datepicker, and Dialog */
+        .accordion { width: 80%; margin: 0 auto; }
+        .ui-accordion-header { font-weight: bold; cursor: pointer; }
+        .ui-datepicker-trigger { cursor: pointer; }
+    </style>
 </head>
 <body>
-	<header>
-		<h1>NCA&T Participation Portal</h1> <!-- Main heading of the portal -->
-		<nav>
-			<ul>
-				<!-- Navigation menu links -->
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About Us</a></li>
-				<li><a href="events.html">Events</a></li>
-				<li><a href="contact.html">Contact Us</a></li>
-			</ul>
-		</nav>
-	</header>
+    <header>
+        <h1>NCA&T Participation Portal</h1> <!-- Main heading of the portal -->
+        <nav>
+            <ul>
+                <!-- Navigation menu links -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<main>
-		<section id="NCA&T Participation Portal">
-			<h2>Welcome to the A&T Participation Portal</h2> <!-- Subheading for the portal -->
-			<p>The new hub for student participation and communication at NC A&T!</p> <!-- Welcome Sentence-->
+    <main>
+        <section id="NCAT-Participation-Portal">
+            <h2>Welcome to the A&T Participation Portal</h2>
+            <p>The new hub for student participation and communication at NC A&T!</p>
 
-			<div class="image-container">
-				<!-- Image representing the portal -->
+            <div class="image-container">
+                <img src="images/welcome.jpg" alt="NCA&T Participation Portal" width="1000" height="500">
+            </div>
 
-				<img src="images/welcome.jpg" alt="NCA&T Participation Portal" width="1000" height="500"> 
-			</div>
+            <p>At North Carolina A&T, we believe that every voice matters and every individual contributes to our vibrant tapestry of community. Join us in fostering a culture of participation and inclusiveness, where everyone is encouraged to stay involved and updated, as well as PARTICIPATE. Remember we stand together, we not only enrich our campus but also pave the way for a brighter future with beautiful memories for EVERYONE.</p>
+        </section>
 
-			<p>At North Carolina A&T, we believe that every voice matters and every individual contributes to our vibrant tapesrty of community. Join us in fostering a culture of participation and inclusiveness, where everyone is encouraged to stay involved and updtated, as well as PARTCIPATE. Remember we stand together, we not only enrich our campus but also pave the way for a brighter future with beatiful memmories for EVERYONE.</p>
-		</section>
+        <section class="flex-container">
+            <!-- Flexbox container for displaying different involvement options -->
+            <div class="flex-item">
+                <img src="images/students.jpg" alt="Get Involved">
+                <h3>Get Involved</h3>
+                <div class="accordion">
+                    <h3>Learn more about getting involved</h3>
+                    <div><p>Details about how students can get involved at NC A&T.</p></div>
+                </div>
+            </div>
+            <div class="flex-item">
+                <img src="images/ghoe-parade.jpg" alt="Upcoming Events">
+                <h4>Upcoming Events</h4>
+                <div class="accordion">
+                    <h3>Upcoming Campus Events</h3>
+                    <div><p>Details of the next events at NC A&T campus.</p></div>
+                </div>
+            </div>
+            <div class="flex-item">
+                <img src="images/connect.jpg" alt="Join a Club">
+                <h5>Join a Club</h5>
+                <div class="accordion">
+                    <h3>Explore available clubs</h3>
+                    <div><p>Information on various student clubs and organizations.</p></div>
+                </div>
+            </div>
+            <div class="flex-item">
+                <img src="images/habitat.jpg" alt="Volunteer Opportunities">
+                <h6>Volunteer Opportunities</h6>
+                <div class="accordion">
+                    <h3>Volunteer and give back</h3>
+                    <div><p>Information on volunteer opportunities and events.</p></div>
+                </div>
+            </div>
+        </section>
 
-		<section class="flex-container">
-			<!-- Flexbox container for displaying different involvement options -->
-			<div class="flex-item">
-				<img src="images/students.jpg" alt="Get Involved" />
-				<h3>Get Involved</h3> <!-- Heading for getting involved -->
-			</div>
-			<div class="flex-item">
-				<img src="images/ghoe-parade.jpg" alt="Upcoming Events" />
-				<h4>Upcoming Events</h4> <!-- Heading for upcoming events -->
-			</div>
-			<div class="flex-item">
-				<img src="images/connect.jpg" alt="Join a Club" />
-				<h5>Join a Club</h5> <!-- Heading for joining clubs -->
-			</div>
-			<div class="flex-item">
-				<img src="images/habitat.jpg" alt="Volunteer Opportunities" />
-				<h6>Volunteer Opportunities</h6> <!-- Heading for volunteer oppurtunities -->
-			</div>
-		</section>
-	</main>
+        <!-- Example of a Datepicker (Could be used in a form) -->
+        <section>
+            <h2>Event Registration</h2>
+            <label for="eventDate">Select an event date:</label>
+            <input type="text" id="eventDate" name="eventDate">
+        </section>
 
+        <!-- Example of a Dialog Box -->
+        <div id="dialog" title="Event Details">
+            <p>Click on an event to view more details.</p>
+        </div>
+    </main>
 
-	<footer>
-		<!-- Footer section with copyright information -->
-		&copy; 2024 NCA&T Participation Portal<br>
-		All Rights Reserved.<br><br>
-		<!-- Links to validate HTML and CSS -->
-		<a href="https://validator.w3.org/check?uri=referer" referrerpolicy="unsafe-url">Validate HTML</a> <br>
-		<a href="https://jigsaw.w3.org/css-validator/check/referer" referrerpolicy="unsafe-url">Validate CSS</a>
-	</footer>
+    <footer>
+        <!-- Footer section with copyright information -->
+        &copy; 2024 NCA&T Participation Portal<br>
+        All Rights Reserved.<br><br>
+        <!-- Links to validate HTML and CSS -->
+        <a href="https://validator.w3.org/check?uri=referer" referrerpolicy="unsafe-url">Validate HTML</a> <br>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" referrerpolicy="unsafe-url">Validate CSS</a>
+    </footer>
 
+    <script>
+        $(document).ready(function() {
+            // Accordion widget
+            $(".accordion").accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+
+            // Datepicker widget
+            $("#eventDate").datepicker();
+
+            // Dialog box widget
+            $("#dialog").dialog({
+                autoOpen: false,
+                buttons: {
+                    "Close": function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+
+            // Open dialog box on click of an event (example)
+            $("h3, h4, h5, h6").click(function() {
+                $("#dialog").dialog("open");
+            });
+        });
+    </script>
 </body>
 </html>
-		
 
-			
